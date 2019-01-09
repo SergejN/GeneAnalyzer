@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codontable>
+   <name>Test</name>
+   <codon>
+      <sequence>ATG</sequence>
+      <terminal>false</terminal>
+      <start>true</start>
+      <aminoacid>Methionine</aminoacid>
+      <tlc>Met</tlc>
+      <olc>M</olc>
+   </codon>
+   <codon>
+      <sequence>CTC</sequence>
+      <terminal>false</terminal>
+      <start>false</start>
+      <aminoacid>Leucine</aminoacid>
+      <tlc>Leu</tlc>
+      <olc>L</olc>
+   </codon>
+   <codon>
+      <sequence>CTA</sequence>
+      <terminal>false</terminal>
+      <start>false</start>
+      <aminoacid>Leucine</aminoacid>
+      <tlc>Leu</tlc>
+      <olc>L</olc>
+   </codon>
+   <codon>
+      <sequence>CTG</sequence>
+      <terminal>false</terminal>
+      <start>false</start>
+      <aminoacid>Leucine</aminoacid>
+      <tlc>Leu</tlc>
+      <olc>L</olc>
+   </codon>
+</codontable>

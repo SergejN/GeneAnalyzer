@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.6" maxVersion="1.6" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPopupMenu" name="jpmGenesMenu">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="jmiSelect">
+          <Properties>
+            <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+              <KeyStroke key="Shift+Alt+S"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Select all"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiSelectActionPerformed1"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="jmiUnselect">
+          <Properties>
+            <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+              <KeyStroke key="Shift+Alt+U"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Unselect all"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiUnselectActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="jmiInvert">
+          <Properties>
+            <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+              <KeyStroke key="Shift+Alt+I"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Invert selection"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiInvertActionPerformed"/>
+          </Events>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JSeparator" name="jSeparator6">
+    </Component>
+    <Menu class="javax.swing.JMenuBar" name="jmMain">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jmDataset">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dataset"/>
+          </Properties>
+          <Events>
+            <EventHandler event="menuSelected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="jmDatasetMenuSelected"/>
+          </Events>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="jmImport">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Import"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="miImport">
+                  <Properties>
+                    <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                      <KeyStroke key="Alt+I"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="From file"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miImportActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="miCreateDpgp">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="From DPGP files"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCreateDpgpActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <MenuItem class="javax.swing.JMenuItem" name="miExport">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+E"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Export as..."/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miExportActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miUnload">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+U"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Unload"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miUnloadActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator5">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miAddGene">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Add gene"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miAddGeneActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miFuse">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fuse gene entries"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miFuseActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miAlign">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Align strain sequences"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miAlignActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <Menu class="javax.swing.JMenu" name="jmFix">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fix"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="miRemoveInsertions">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Remove ORF disrupting insertions"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miRemoveInsertionsActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="miRemovePTC">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Remove premature terminal codons"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miRemovePTCActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator4">
+            </MenuItem>
+            <Menu class="javax.swing.JMenu" name="jmCT">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Codon table"/>
+              </Properties>
+              <Events>
+                <EventHandler event="menuSelected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="jmCTMenuSelected"/>
+              </Events>
+            </Menu>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator7">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miExit">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+X"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Exit"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miExitActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jmAnalyses">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Analyses"/>
+          </Properties>
+          <Events>
+            <EventHandler event="menuSelected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="jmAnalysesMenuSelected"/>
+          </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jmFilters">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Filters"/>
+          </Properties>
+          <Events>
+            <EventHandler event="menuSelected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="jmFiltersMenuSelected"/>
+          </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jmTools">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tools"/>
+          </Properties>
+          <Events>
+            <EventHandler event="menuSelected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="jmToolsMenuSelected"/>
+          </Events>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="jmSort">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sort"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="miSortByName">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="By gene name"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miSortByNameActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="miSortByQuality">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="By quality level"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miSortByQualityActionPerformed"/>
+                  </Events>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <MenuItem class="javax.swing.JMenuItem" name="miQualityCheck">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Quality check"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miQualityCheckActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miCreateCT">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Custom codon table"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCreateCTActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miCoverage">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Coverage"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCoverageActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miShowNames">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Show selected gene names"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miShowNamesActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator8">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miScript">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Alt+S"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Script"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miScriptActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JSeparator" name="jSeparator1">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="miSettings">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Settings"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miSettingsActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <AccessibilityProperties>
+    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="null"/>
+  </AccessibilityProperties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jmMain"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+              <Component id="jSeparator3" min="-2" pref="6" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jViewsToolbar" pref="434" max="32767" attributes="0"/>
+                  <Component id="jpToolView" alignment="0" pref="434" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jSeparator3" alignment="0" pref="787" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jViewsToolbar" min="-2" pref="23" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jpToolView" pref="731" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel2" max="32767" attributes="1"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel2" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Data set"/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="471" max="-2" attributes="0"/>
+                      <EmptySpace pref="18" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane1" pref="724" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="lvGenes">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="6" rowCount="0">
+                        <Column editable="true" title="Use" type="java.lang.Boolean"/>
+                        <Column editable="false" title="#" type="java.lang.String"/>
+                        <Column editable="false" title="Common name" type="java.lang.String"/>
+                        <Column editable="false" title="Alias" type="java.lang.String"/>
+                        <Column editable="false" title="Strains" type="java.lang.String"/>
+                        <Column editable="false" title="Quality check" type="java.lang.String"/>
+                      </Table>
+                    </Property>
+                    <Property name="componentPopupMenu" type="javax.swing.JPopupMenu" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                      <ComponentRef name="jpmGenesMenu"/>
+                    </Property>
+                    <Property name="selectionModel" type="javax.swing.ListSelectionModel" editor="org.netbeans.modules.form.editors2.JTableSelectionModelEditor">
+                      <JTableSelectionModel selectionMode="0"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lvGenesMouseClicked"/>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="lvGenesKeyReleased"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JSeparator" name="jSeparator3">
+      <Properties>
+        <Property name="orientation" type="int" value="1"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="jpToolView">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+    </Container>
+    <Container class="javax.swing.JToolBar" name="jViewsToolbar">
+      <Properties>
+        <Property name="floatable" type="boolean" value="false"/>
+        <Property name="rollover" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout"/>
+    </Container>
+  </SubComponents>
+</Form>
